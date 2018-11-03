@@ -1,0 +1,34 @@
+{
+  "name": "kubeamp",
+  "version": "1.0.0",
+  "description": "amplified kubectl",
+  "bin": "build/index.js",
+  "repository": "https://github.com/BrunoScheufler/kubeamp",
+  "author": "Bruno Scheufler",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/configstore": "^2.1.1",
+    "@types/execa": "^0.9.0",
+    "@types/fs-extra": "^5.0.4",
+    "@types/inquirer": "^0.0.43",
+    "@types/minimist": "^1.2.0",
+    "@types/node": "^10.12.2",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
+  },
+  "scripts": {
+    "build": "tsc --project .",
+    "lint": "tslint --project .",
+    "test": "yarn build && yarn lint",
+    "prepare": "yarn test"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "configstore": "^4.0.0",
+    "execa": "^1.0.0",
+    "fs-extra": "^7.0.0",
+    "inquirer": "^6.2.0",
+    "minimist": "^1.2.0"
+  }
+}
