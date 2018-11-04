@@ -10,7 +10,8 @@ export const HOME = process.env.HOME!;
 
 export const setupItems = [
   '✏️    Add config',
-  '🏷    Set context',
+  '🔖    Set context',
+  '🏷    Set namespace preference',
   '🔧    Manage configs',
   '⚙️    Set ctl command'
 ];
@@ -57,9 +58,12 @@ export async function handleSetup(config: Config) {
       await setCurrentContext(config);
       break;
     case 2:
-      await manageConfigs(config);
+      await setNamespace(config);
       break;
     case 3:
+      await manageConfigs(config);
+      break;
+    case 4:
       await setCtlCommand(config);
       break;
   }
@@ -169,11 +173,45 @@ export async function setCtlCommand(config: Config) {
     {
       type: 'input',
       name: 'ctlCommand',
-      message: 'Enter command to use (kubectl by default)',
+      message: 'Enter command to use (or default to kubectl with empty input)',
       default: config.get('ctlCommand')
     }
   ]);
 
-  config.set('ctlCommand', ctlCommand);
-  console.log(chalk.greenBright(`Now using ${ctlCommand}!`));
+  const command = ctlCommand.length > 0 ? ctlCommand : 'kubectl';
+  config.set('ctlCommand', command);
+  console.log(chalk.greenBright(`Now using '${command}' as ctl command!`));
+}
+
+export async function setNamespace(config: Config) {
+  const { namespace } = await inquirer.prompt<{ namespace: string }>([
+    {
+      type: 'input',
+      name: 'namespace',
+      message: 'Update namespace preference'
+    }
+  ]);
+
+  const ctx = await getCurrentContext(config);
+
+  if (!ctx) {
+    console.log(chalk.redBright('Could not update namespace preference'));
+    return;
+  }
+
+  const proc = await execa(
+    config.get('ctlCommand'),
+    ['config', 'set-context', ctx, '--namespace', namespace],
+    {
+      shell: true,
+      env: getCtlProcessEnv(config)
+    }
+  );
+
+  if (proc.failed) {
+    console.log(chalk.redBright('Could not update namespace preference'));
+    return;
+  }
+
+  console.log(chalk.greenBright(`Now using namespace '${namespace}'`));
 }

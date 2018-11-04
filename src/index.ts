@@ -6,8 +6,6 @@ import chalk from 'chalk';
 import {
   HOME,
   handleSetup,
-  baseConfig,
-  getConfigurations,
   getProcessArgs,
   getRawProcessArgs,
   getCtlProcessEnv
