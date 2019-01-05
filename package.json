@@ -1,8 +1,11 @@
 {
   "name": "kubeamp",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "amplified kubectl client",
-  "bin": "build/index.js",
+  "bin": {
+    "kubeamp": "build/index.js",
+    "kamp": "build/index.js"
+  },
   "repository": "https://github.com/BrunoScheufler/kubeamp",
   "author": "Bruno Scheufler",
   "license": "MIT",

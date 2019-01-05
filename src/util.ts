@@ -10,9 +10,9 @@ export const HOME = process.env.HOME!;
 
 export const setupItems = [
   '✏️    Add config',
-  '🔖    Set context',
+  '🔖   Set context',
   '🏷    Set namespace preference',
-  '🔧    Manage configs',
+  '🔧   Manage configs',
   '⚙️    Set ctl command'
 ];
 
