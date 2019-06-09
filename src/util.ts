@@ -108,7 +108,7 @@ export async function manageConfigs(config: Config) {
   const configs: string[] = config.get('configs');
 
   if (configs.length < 1) {
-    console.log(chalk.greenBright('No configurations found.'));
+    console.log(chalk.redBright('🤨 No configurations found.'));
     return;
   }
 
@@ -122,7 +122,7 @@ export async function manageConfigs(config: Config) {
   ]);
 
   configs.splice(configs.indexOf(configPath), 1);
-  console.log(chalk.greenBright('Removed configuration!'));
+  console.log(chalk.greenBright('🤖 Removed configuration!'));
 
   config.set('configs', configs);
 }
