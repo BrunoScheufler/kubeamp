@@ -195,7 +195,7 @@ export async function setNamespace(config: Config) {
   const ctx = await getCurrentContext(config);
 
   if (!ctx) {
-    console.log(chalk.redBright('Could not update namespace preference'));
+    console.log(chalk.redBright('💥 Could not update namespace preference'));
     return;
   }
 
@@ -209,9 +209,9 @@ export async function setNamespace(config: Config) {
   );
 
   if (proc.failed) {
-    console.log(chalk.redBright('Could not update namespace preference'));
+    console.log(chalk.redBright('💥 Could not update namespace preference'));
     return;
   }
 
-  console.log(chalk.greenBright(`Now using namespace '${namespace}'`));
+  console.log(chalk.greenBright(`🎉 Now using namespace '${namespace}'`));
 }
