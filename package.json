@@ -1,6 +1,6 @@
 {
   "name": "kubeamp",
-  "version": "0.0.0-development",
+  "version": "2.0.0-development",
   "description": "amplified kubectl client",
   "bin": {
     "kubeamp": "build/index.js",
