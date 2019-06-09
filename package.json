@@ -14,7 +14,7 @@
     "@types/configstore": "2.1.1",
     "@types/execa": "0.9.0",
     "@types/fs-extra": "5.1.0",
-    "@types/inquirer": "0.0.43",
+    "@types/inquirer": "0.0.44",
     "@types/minimist": "1.2.0",
     "@types/node": "10.12.18",
     "prettier": "^1.18.2",
