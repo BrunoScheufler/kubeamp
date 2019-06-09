@@ -137,10 +137,10 @@
     into-stream "^4.0.0"
     lodash "^4.17.4"
 
-"@types/configstore@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@types/configstore/-/configstore-2.1.1.tgz#cd1e8553633ad3185c3f2f239ecff5d2643e92b6"
-  integrity sha1-zR6FU2M60xhcPy8jns/10mQ+krY=
+"@types/configstore@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@types/configstore/-/configstore-4.0.0.tgz#cb718f9507e9ee73782f40d07aaca1cd747e36fa"
+  integrity sha512-SvCBBPzOIe/3Tu7jTl2Q8NjITjLmq9m7obzjSyb8PXWWZ31xVK6w4T6v8fOx+lrgQnqk3Yxc00LDolFsSakKCA==
 
 "@types/events@*":
   version "3.0.0"
