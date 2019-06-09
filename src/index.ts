@@ -19,7 +19,7 @@ const { name: packageName } = require('../package.json');
 
   if (!HOME) {
     console.log(
-      chalk.redBright(`Please add HOME to your environment variables.`)
+      chalk.redBright(`Please add $HOME to your environment variables.`)
     );
     process.exit(1);
     return;

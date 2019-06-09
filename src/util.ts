@@ -9,11 +9,11 @@ import minimist = require('minimist');
 export const HOME = process.env.HOME!;
 
 export const setupItems = [
-  '✏️    Add config',
-  '🔖   Set context',
-  '🏷    Set namespace preference',
-  '🔧   Manage configs',
-  '⚙️    Set ctl command'
+  '✏️ Add config',
+  '🔖 Set context',
+  '🏷 Set namespace preference',
+  '🔧 Manage configs',
+  '⚙️ Set ctl command'
 ];
 
 export function getConfigurations(config: Config) {

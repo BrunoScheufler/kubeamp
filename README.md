@@ -1,5 +1,7 @@
 # kubeamp
 
+[![CircleCI](https://circleci.com/gh/BrunoScheufler/kubeamp.svg?style=svg)](https://circleci.com/gh/BrunoScheufler/kubeamp)
+
 > ⚡️ amplified kubectl client
 
 ## features
