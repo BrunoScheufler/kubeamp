@@ -18,7 +18,7 @@
     "@types/minimist": "1.2.0",
     "@types/node": "10.17.3",
     "prettier": "1.18.2",
-    "semantic-release": "15.13.28",
+    "semantic-release": "15.13.29",
     "tslint": "5.20.0",
     "typescript": "3.6.4"
   },
