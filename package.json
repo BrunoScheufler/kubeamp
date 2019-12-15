@@ -33,7 +33,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "chalk": "2.4.2",
+    "chalk": "3.0.0",
     "configstore": "5.0.0",
     "execa": "3.4.0",
     "fs-extra": "7.0.1",
