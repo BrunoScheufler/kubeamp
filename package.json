@@ -37,7 +37,7 @@
     "configstore": "5.0.0",
     "execa": "3.4.0",
     "fs-extra": "7.0.1",
-    "inquirer": "7.0.0",
+    "inquirer": "7.0.1",
     "minimist": "1.2.0"
   },
   "release": {
