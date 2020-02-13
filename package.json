@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "chalk": "3.0.0",
-    "configstore": "5.0.0",
+    "configstore": "5.0.1",
     "execa": "4.0.0",
     "fs-extra": "7.0.1",
     "inquirer": "7.0.4",
