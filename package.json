@@ -38,7 +38,7 @@
     "execa": "4.0.0",
     "fs-extra": "7.0.1",
     "inquirer": "7.1.0",
-    "minimist": "1.2.0"
+    "minimist": "1.2.3"
   },
   "release": {
     "plugins": [
